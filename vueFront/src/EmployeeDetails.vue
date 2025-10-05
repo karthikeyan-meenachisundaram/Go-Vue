@@ -102,7 +102,7 @@ async function deleteEmployee() {
   if (!selectedEmp.value) return;
 
   try {
-    await axios.delete(`http://localhost:8080/api/employees/${selectedEmp.value.emp_id}`);
+    await axios.delete(`http://13.61.7.136:8080/api/employees/${selectedEmp.value.emp_id}`);
     employees.value = employees.value.filter(e => e.emp_id !== selectedEmp.value.emp_id);
 
     successMessage.value = `Employee ${selectedEmp.value.emp_name} deleted successfully`;
@@ -122,7 +122,7 @@ async function fetchEmployees() {
   employees.value = [];
 
   try {
-    const res = await axios.get('http://localhost:8080/api/employees');
+    const res = await axios.get('http://13.61.7.136:8080/api/employees');
     employees.value = Array.isArray(res.data) ? res.data : [];
   } catch (err) {
     error.value = err.response?.data?.error || err.message || 'Failed to load employees';
