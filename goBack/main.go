@@ -47,7 +47,7 @@ func main() {
 	// allowed origin for CORS (still configurable via env if needed)
 	allowedOrigin := os.Getenv("ALLOW_ORIGIN")
 	if allowedOrigin == "" {
-		allowedOrigin = "http://localhost:5173"
+		allowedOrigin = "http://13.61.7.136:5173"
 	}
 
 	// PORT
