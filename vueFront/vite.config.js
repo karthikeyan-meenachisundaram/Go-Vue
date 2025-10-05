@@ -29,5 +29,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    host: true,     // 👈 allows access from EC2/public IP
+    port: 5173,     // 👈 optional (defaults to 5173)
+  },
 })
+
 
