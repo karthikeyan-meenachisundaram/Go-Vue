@@ -96,7 +96,7 @@ function cancelDelete() {
 
 /*
 // change if your backend is on different host/port
-const API_URL = 'http://localhost:8080/api/employees';*/
+const API_URL = 'http://56.228.24.174:8080/api/employees';*/
 
 async function deleteEmployee() {
   if (!selectedEmp.value) return;
