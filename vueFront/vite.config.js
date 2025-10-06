@@ -1,38 +1,12 @@
-/*
-import { fileURLToPath, URL } from 'node:url'
-
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
-  },
-})
-*/
-import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
-  },
   server: {
-    host: true,     // 👈 allows access from EC2/public IP
-    port: 5173,     // 👈 optional (defaults to 5173)
-  },
+    proxy: {
+      //'/api': 'http://172.31.45.255:8080' // Forward /api calls to backend
+      '/api': 'http://localhost:8080' 
+    }
+  }
 })
-
-

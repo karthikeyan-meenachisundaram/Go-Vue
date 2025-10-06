@@ -14,11 +14,11 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 function goToCreateEmployee() {
-  router.push('/create-employee');
+  router.push('/create');
 }
 
 function goToEmployeeDetails() {
-  router.push('/employee-details');
+  router.push('/list');
 }
 </script>
 

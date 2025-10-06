@@ -44,7 +44,7 @@ const success = ref(null);
 const loading = ref(true);
 const original = ref({ emp_name: '', department: '', language: '' });
 
-const API_URL = 'http://13.61.7.136:8080/api/employees';
+const API_URL = '/api/employees';
 
 // get id from route
 const idParam = route.params.id;
@@ -156,7 +156,7 @@ async function updateEmployee() {
 
     // Optionally redirect back to list after a short delay
     setTimeout(() => {
-      router.push('/employee-details');
+      router.push('/list');
     }, 800);
   } catch (err) {
     console.error(err);
@@ -166,7 +166,7 @@ async function updateEmployee() {
 
 // Cancel - return to list
 function cancel() {
-  router.push('/employee-details');
+  router.push('/list');
 }
 
 

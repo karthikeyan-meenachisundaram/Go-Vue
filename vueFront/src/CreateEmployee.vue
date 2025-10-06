@@ -49,7 +49,7 @@ const hasInput = computed(() => {
 })
 
 // API base URL
-const API_URL = 'http://13.61.7.136:8080/api/employees';
+const API_URL = '/api/employees';
 
 // Create Employee function
 async function createEmployee() {

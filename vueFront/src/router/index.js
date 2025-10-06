@@ -6,8 +6,8 @@ import UpdateEmployee from '../UpdateEmployee.vue';
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/employee-details', component: EmployeeDetails },
-  { path: '/create-employee', component: CreateEmployee },
+  { path: '/list', component: EmployeeDetails },
+  { path: '/create', component: CreateEmployee },
   { path: '/update/:id', component: UpdateEmployee }, 
 ];
 
