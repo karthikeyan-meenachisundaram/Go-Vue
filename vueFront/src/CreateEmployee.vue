@@ -37,7 +37,6 @@ const language = ref('');
 const error = ref(null);
 const success = ref(null);
 
-
 function goHome(){
     router.push('/');
 }
